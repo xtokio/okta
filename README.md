@@ -46,7 +46,6 @@ get "/callback" do |env|
   name  = user_info["name"].to_s
   email = user_info["email"].to_s
 
-  puts netid
   puts name
   puts email
 
