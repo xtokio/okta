@@ -8,13 +8,13 @@ module Okta
 
   class Auth
     property logged : Bool
-    @base_domain = ""
-    @user_info   = ""
-    @scope       = ""
-    @state       = ""
     @logged      = false
 
     def initialize(base_domain : String,client_id : String,client_secret : String,redirect_uri : String,token_uri : String,authorize_uri : String,user_info : String,scope : String,state : String)
+      @base_domain = base_domain
+      @user_info   = user_info
+      @scope       = scope
+      @state       = state
 
       @oauth2_client = OAuth2::Client.new(
           host: @base_domain, 
